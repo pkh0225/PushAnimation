@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430F1FAE2127AA760014BDBD /* CostomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1FAD2127AA760014BDBD /* CostomViewController.swift */; };
 		43A22FC12126F1C9007653C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A22FC02126F1C9007653C3 /* AppDelegate.swift */; };
 		43A22FC32126F1C9007653C3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A22FC22126F1C9007653C3 /* RootViewController.swift */; };
 		43A22FC62126F1C9007653C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A22FC42126F1C9007653C3 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430F1FAD2127AA760014BDBD /* CostomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostomViewController.swift; sourceTree = "<group>"; };
 		43A22FBD2126F1C9007653C3 /* CustomPushAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPushAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A22FC02126F1C9007653C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A22FC22126F1C9007653C3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				43A22FD62126F5AB007653C3 /* SnapShotViewController.swift */,
 				43A22FD72126F5AB007653C3 /* UpViewController.swift */,
 				43A22FD42126F53C007653C3 /* LeftViewController.swift */,
+				430F1FAD2127AA760014BDBD /* CostomViewController.swift */,
 				43A22FC42126F1C9007653C3 /* Main.storyboard */,
 				43A22FC72126F1CB007653C3 /* Assets.xcassets */,
 				43A22FC92126F1CB007653C3 /* LaunchScreen.storyboard */,
@@ -180,6 +183,7 @@
 				43A22FDB2126F5AB007653C3 /* UpViewController.swift in Sources */,
 				43A22FDD2126F5AB007653C3 /* RightViewController.swift in Sources */,
 				43A22FD32126F38F007653C3 /* UITableViewExtension.swift in Sources */,
+				430F1FAE2127AA760014BDBD /* CostomViewController.swift in Sources */,
 				43A22FD52126F53C007653C3 /* LeftViewController.swift in Sources */,
 				43A22FDC2126F5AB007653C3 /* NoneViewController.swift in Sources */,
 				43A22FE82126FCD6007653C3 /* NavigationManager.swift in Sources */,

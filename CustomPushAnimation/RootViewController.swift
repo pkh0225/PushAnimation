@@ -31,7 +31,7 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +48,8 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.textLabel?.text = "none"
         case 4:
             cell.textLabel?.text = "snapShot"
+        case 5:
+            cell.textLabel?.text = "Costom"
             
         default:
             break
@@ -75,6 +77,10 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
             break
         case 4:
             let vc = assembleModule(identifier: "SnapShotViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 5:
+            let vc = assembleModule(identifier: "CostomViewController")
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
