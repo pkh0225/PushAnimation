@@ -21,6 +21,19 @@ public enum NavigationAnimationType: Int {
 
 ```
 
+
+
+## 🚦 Protocol - NavigationAnimatorAble
+
+```
+protocol NavigationAnimatorAble {
+    var pushAnimation: PushAnimator? { get }
+    var popAnimation: PopAnimator? { get }
+}
+```
+
+
+
 ## 🔍 How to use
 
 1. Confirm to `NavigationAnimatorAble` protocol
@@ -38,15 +51,33 @@ extension RightViewController: NavigationAnimatorAble {
 }
 ```
 
-
-
-## 🚦 Protocol - NavigationAnimatorAble
+## 📸 Snapshot view
 
 ```
-protocol NavigationAnimatorAble {
-    var pushAnimation: PushAnimator? { get }
-    var popAnimation: PopAnimator? { get }
+extension SnapShotViewController: NavigationAnimatorAble {
+    var pushAnimation: PushAnimator? {
+        return PushAnimator(animationType: .snapShot)
+    }
+    var popAnimation: PopAnimator? {
+        return PopAnimator(animationType: .none)
+    }
 }
 ```
 
+##### You can also create shadow below snapshow view
 
+```
+let snapShotView = SnapShotView(view: fromViewController.view, shadows: .right)
+```
+
+```
+struct ShadowDirection: OptionSet {
+    let rawValue: Int
+    static let left = ShadowDirection(rawValue: 1 << 0)
+    static let right = ShadowDirection(rawValue: 1 << 1)
+    static let up = ShadowDirection(rawValue: 1 << 2)
+    static let down = ShadowDirection(rawValue: 1 << 3)
+    static let none = ShadowDirection(rawValue: 1 << 4)
+    static let all: ShadowDirection = [.left, .right, .up, .down]
+}
+```

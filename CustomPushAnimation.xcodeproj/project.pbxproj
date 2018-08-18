@@ -24,6 +24,7 @@
 		43A22FE62126F651007653C3 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A22FE22126F651007653C3 /* PopAnimator.swift */; };
 		43A22FE82126FCD6007653C3 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A22FE72126FCD6007653C3 /* NavigationManager.swift */; };
 		43A22FEA2127057D007653C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 43A22FE92127057D007653C3 /* README.md */; };
+		4B419B712127C12F00A83852 /* DownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B419B702127C12F00A83852 /* DownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		43A22FE22126F651007653C3 /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		43A22FE72126FCD6007653C3 /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		43A22FE92127057D007653C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4B419B702127C12F00A83852 /* DownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				43A22FD92126F5AB007653C3 /* RightViewController.swift */,
 				43A22FD62126F5AB007653C3 /* SnapShotViewController.swift */,
 				43A22FD72126F5AB007653C3 /* UpViewController.swift */,
+				4B419B702127C12F00A83852 /* DownViewController.swift */,
 				43A22FD42126F53C007653C3 /* LeftViewController.swift */,
 				430F1FAD2127AA760014BDBD /* CostomViewController.swift */,
 				43A22FC42126F1C9007653C3 /* Main.storyboard */,
@@ -192,6 +195,7 @@
 				43A22FC12126F1C9007653C3 /* AppDelegate.swift in Sources */,
 				43A22FE32126F651007653C3 /* PushAnimator.swift in Sources */,
 				43A22FE62126F651007653C3 /* PopAnimator.swift in Sources */,
+				4B419B712127C12F00A83852 /* DownViewController.swift in Sources */,
 				43A22FDA2126F5AB007653C3 /* SnapShotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

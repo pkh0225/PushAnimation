@@ -88,7 +88,7 @@ extension PushAnimator: UIViewControllerAnimatedTransitioning {
                 complete()
                 
             case .snapShot:
-                let snapShotView = SnapShotView(view: fromViewController.view)
+                let snapShotView = SnapShotView(view: fromViewController.view, shadows: .right)
                 toViewController.view.addSubview(snapShotView)
                 toViewController.view.sendSubview(toBack: snapShotView)
                 complete()
@@ -141,7 +141,33 @@ extension PushAnimator: UIViewControllerAnimatedTransitioning {
                 
                 
             case .down:
-                complete()
+                let snapShotView = SnapShotView(view: fromViewController.view)
+                toViewController.view.addSubview(snapShotView)
+                toViewController.view.sendSubview(toBack: snapShotView)
+                snapShotView.isHidden = true
+                
+                let layerView = UIView(frame: fromViewController.view.bounds)
+                layerView.backgroundColor = UIColor.black
+                layerView.alpha = 0;
+                fromViewController.view.addSubview(layerView)
+                
+                toViewController.view.frame.origin.y = -toViewController.view.frame.size.height
+                toViewController.view.alpha = 0.5
+                
+                let backgroundColor: UIColor? = toViewController.view.backgroundColor
+                toViewController.view.backgroundColor = UIColor.clear
+                
+                UIView.animate(withDuration: self.duration, delay: 0, options: .curveEaseOut, animations: {() -> Void in
+                    toViewController.view.frame.origin.y = 0
+                    toViewController.view.alpha = 1
+                    layerView.alpha = SnapShotView.DimLayerAlpha
+                    
+                }, completion: {(_ finished: Bool) -> Void in
+                    snapShotView.isHidden = false
+                    layerView.removeFromSuperview()
+                    toViewController.view.backgroundColor = backgroundColor
+                    complete()
+                })
                 
             }
             

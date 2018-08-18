@@ -31,7 +31,7 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,10 +45,12 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 2:
             cell.textLabel?.text = "up"
         case 3:
-            cell.textLabel?.text = "none"
+            cell.textLabel?.text = "down"
         case 4:
-            cell.textLabel?.text = "snapShot"
+            cell.textLabel?.text = "none"
         case 5:
+            cell.textLabel?.text = "snapShot"
+        case 6:
             cell.textLabel?.text = "Costom"
             
         default:
@@ -72,14 +74,18 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 3:
-            let vc = assembleModule(identifier: "NoneViewController")
+            let vc = assembleModule(identifier: "DownViewController")
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 4:
-            let vc = assembleModule(identifier: "SnapShotViewController")
+            let vc = assembleModule(identifier: "NoneViewController")
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 5:
+            let vc = assembleModule(identifier: "SnapShotViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 6:
             let vc = assembleModule(identifier: "CostomViewController")
             self.navigationController?.pushViewController(vc, animated: true)
             break
