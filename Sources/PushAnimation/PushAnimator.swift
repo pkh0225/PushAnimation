@@ -90,7 +90,7 @@ extension PushAnimator: UIViewControllerAnimatedTransitioning {
             case .snapShot:
                 let snapShotView = SnapShotView(view: fromViewController.view, shadows: .right)
                 toViewController.view.addSubview(snapShotView)
-                toViewController.view.sendSubview(toBack: snapShotView)
+                toViewController.view.sendSubviewToBack(snapShotView)
                 complete()
                 
             case .left, .right:
@@ -113,7 +113,7 @@ extension PushAnimator: UIViewControllerAnimatedTransitioning {
             case .up:
                 let snapShotView = SnapShotView(view: fromViewController.view)
                 toViewController.view.addSubview(snapShotView)
-                toViewController.view.sendSubview(toBack: snapShotView)
+                toViewController.view.sendSubviewToBack(snapShotView)
                 snapShotView.isHidden = true
                 
                 let layerView = UIView(frame: fromViewController.view.bounds)
@@ -143,7 +143,7 @@ extension PushAnimator: UIViewControllerAnimatedTransitioning {
             case .down:
                 let snapShotView = SnapShotView(view: fromViewController.view)
                 toViewController.view.addSubview(snapShotView)
-                toViewController.view.sendSubview(toBack: snapShotView)
+                toViewController.view.sendSubviewToBack(snapShotView)
                 snapShotView.isHidden = true
                 
                 let layerView = UIView(frame: fromViewController.view.bounds)
