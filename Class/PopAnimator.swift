@@ -7,6 +7,7 @@
 //
 import UIKit
 
+let VELOCITY_VALUE: CGFloat = 200.0
 public typealias BoolReturnClosure = () -> Bool
 
 class PopAnimator: NSObject   {
@@ -80,19 +81,19 @@ class PopAnimator: NSObject   {
             
         case .left:
             isVelocity = velocity.x > 0
-            isCheckGesture = fabs(velocity.y) > fabs(velocity.x)
+            isCheckGesture = abs(velocity.y) > abs(velocity.x)
             
         case .right:
             isVelocity = velocity.x < 0
-            isCheckGesture = fabs(velocity.y) > fabs(velocity.x)
+            isCheckGesture = abs(velocity.y) > abs(velocity.x)
             
         case .up:
             isVelocity = velocity.y < 0
-            isCheckGesture = fabs(velocity.y) < fabs(velocity.x)
+            isCheckGesture = abs(velocity.y) < abs(velocity.x)
             
         case .down:
             isVelocity = velocity.y > 0
-            isCheckGesture = fabs(velocity.y) < fabs(velocity.x)
+            isCheckGesture = abs(velocity.y) < abs(velocity.x)
             
         }
         if recognizer.state == .began {
@@ -141,10 +142,10 @@ class PopAnimator: NSObject   {
                     d = 0
                     
                 case .left, .right:
-                    d = fabs(translation.x) / view.bounds.width
+                    d = abs(translation.x) / view.bounds.width
                     
                 case .up, .down:
-                    d = fabs(translation.y) / view.bounds.height
+                    d = abs(translation.y) / view.bounds.height
                     
                 }
 //                print(translation.y)
@@ -162,16 +163,48 @@ class PopAnimator: NSObject   {
                     endCheck = false
                     
                 case .left:
-                    endCheck = recognizer.velocity(in: view).x < -50
+                    if recognizer.velocity(in: view).x < -VELOCITY_VALUE {
+                        endCheck = true
+                    }
+                    else if recognizer.velocity(in: view).x > VELOCITY_VALUE {
+                        endCheck = false
+                    }
+                    else {
+                        endCheck = interactionController.percentComplete >= 0.3
+                    }
                     
                 case .right:
-                    endCheck = recognizer.velocity(in: view).x > 50
+                    if recognizer.velocity(in: view).x > VELOCITY_VALUE {
+                        endCheck = true
+                    }
+                    else if recognizer.velocity(in: view).x < -VELOCITY_VALUE {
+                        endCheck = false
+                    }
+                    else {
+                        endCheck = interactionController.percentComplete >= 0.3
+                    }
                     
                 case.up:
-                    endCheck = recognizer.velocity(in: view).y > 50
+                    if recognizer.velocity(in: view).y > VELOCITY_VALUE {
+                        endCheck = true
+                    }
+                    else if recognizer.velocity(in: view).y < -VELOCITY_VALUE {
+                        endCheck = false
+                    }
+                    else {
+                        endCheck = interactionController.percentComplete >= 0.3
+                    }
                     
                 case .down:
-                    endCheck = recognizer.velocity(in: view).y < -50
+                    if recognizer.velocity(in: view).y < -VELOCITY_VALUE {
+                        endCheck = true
+                    }
+                    else if recognizer.velocity(in: view).y > VELOCITY_VALUE {
+                        endCheck = false
+                    }
+                    else {
+                        endCheck = interactionController.percentComplete >= 0.3
+                    }
                     
                 }
                 
