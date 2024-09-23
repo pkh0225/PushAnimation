@@ -1,6 +1,8 @@
 # ⛳️ Custom Navigation Animatior
 > Custom Push and Pop animation
 
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+
 - Support all directions :)
 - left, right, up, down, snapshot 
 
