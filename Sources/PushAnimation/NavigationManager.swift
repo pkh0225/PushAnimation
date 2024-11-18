@@ -8,11 +8,22 @@
 
 import UIKit
 
-class NavigationManager: NSObject {
-    
-    static let shared = NavigationManager()
-    
-    weak var mainNavigation: UINavigationController? {
+@MainActor
+@inline(__always) public func KeyWindow() -> UIWindow? {
+    if #available(iOS 13.0, *) {
+        let scenes = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        return scenes?.windows.first
+    }
+    else {
+        return UIApplication.shared.windows.first { $0.isKeyWindow }
+    }
+}
+
+@MainActor
+public class NavigationManager: NSObject {
+    public static let shared = NavigationManager()
+
+    public var mainNavigation: UINavigationController? {
         didSet {
             mainNavigation?.delegate = self
             mainNavigation?.interactivePopGestureRecognizer?.delegate = self
@@ -22,7 +33,7 @@ class NavigationManager: NSObject {
 
 //MARK: - UINavigationControllerDelegate
 extension NavigationManager: UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-    func navigationController(_ navigationController: UINavigationController,
+    public func navigationController(_ navigationController: UINavigationController,
                               animationControllerFor operation: UINavigationController.Operation,
                               from fromVC: UIViewController,
                               to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -45,8 +56,8 @@ extension NavigationManager: UINavigationControllerDelegate, UIGestureRecognizer
         return nil
     }
     
-    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        
+    public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+
         if let animator = animationController as? PopAnimator {
             return animator.interactionController
         }
@@ -56,7 +67,7 @@ extension NavigationManager: UINavigationControllerDelegate, UIGestureRecognizer
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
     }
     
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         
         if navigationController.viewControllers.count < 2 {
             navigationController.interactivePopGestureRecognizer?.isEnabled = false

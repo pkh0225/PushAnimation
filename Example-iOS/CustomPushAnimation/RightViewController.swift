@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PushAnimation
 
 class RightViewController: UIViewController {
 

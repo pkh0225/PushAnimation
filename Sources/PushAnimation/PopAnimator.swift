@@ -7,10 +7,11 @@
 //
 import UIKit
 
-let VELOCITY_VALUE: CGFloat = 200.0
+
 public typealias BoolReturnClosure = () -> Bool
 
-class PopAnimator: NSObject   {
+public class PopAnimator: NSObject   {
+    private let VELOCITY_VALUE: CGFloat = 200.0
     
     var touchViews = [UIView]()
     var scrollViews = [UIView]()
@@ -21,14 +22,14 @@ class PopAnimator: NSObject   {
     var type: NavigationAnimationType = .none
     
     weak var tagetViewController: UIViewController?
-    var checkStart: BoolReturnClosure?
-    var isOnlyGesture: Bool = false {
+    public var checkStart: BoolReturnClosure?
+    public var isOnlyGesture: Bool = false {
         willSet {
             self.isAnimation = !newValue
         }
     }
-    var isAnimation: Bool = true
-    
+    public var isAnimation: Bool = true
+
     public init(animationType: NavigationAnimationType, duration: TimeInterval = 0.2, animation: NavigationAnimationClosure? = nil){
 
         self.animation = animation
@@ -47,11 +48,11 @@ class PopAnimator: NSObject   {
         self.animation = animation
     }
     
-    func setAnimation(_ closure: @escaping NavigationAnimationClosure) -> Void {
+    public func setAnimation(_ closure: @escaping NavigationAnimationClosure) -> Void {
         self.animation = closure
     }
     
-    func addTagetView(_ tagetView: UIView) {
+    public func addTagetView(_ tagetView: UIView) {
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.panGestureRecognizer))
         panRecognizer.delegate = self
         tagetView.addGestureRecognizer(panRecognizer)
@@ -239,11 +240,11 @@ class PopAnimator: NSObject   {
 }
 
 extension PopAnimator: UIViewControllerAnimatedTransitioning {
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return self.duration
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         guard let toViewController: UIViewController = transitionContext.viewController(forKey: .to),
             let fromViewController: UIViewController = transitionContext.viewController(forKey: .from) else {

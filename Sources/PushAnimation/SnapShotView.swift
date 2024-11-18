@@ -10,28 +10,31 @@ import UIKit
 
 public let LeftRigthLayerAlpha: CGFloat = 0.1
 
-struct ShadowDirection: OptionSet {
-    let rawValue: Int
-    static let left = ShadowDirection(rawValue: 1 << 0)
-    static let right = ShadowDirection(rawValue: 1 << 1)
-    static let up = ShadowDirection(rawValue: 1 << 2)
-    static let down = ShadowDirection(rawValue: 1 << 3)
-    static let none = ShadowDirection(rawValue: 1 << 4)
-    static let all: ShadowDirection = [.left, .right, .up, .down]
-}
+public class SnapShotView: UIView {
+    public struct ShadowDirection: OptionSet {
+        public let rawValue: Int
+        public init(rawValue: Int) {
+            self.rawValue = rawValue
+        }
+        public static let left = ShadowDirection(rawValue: 1 << 0)
+        public static let right = ShadowDirection(rawValue: 1 << 1)
+        public static let up = ShadowDirection(rawValue: 1 << 2)
+        public static let down = ShadowDirection(rawValue: 1 << 3)
+        public static let none = ShadowDirection(rawValue: 1 << 4)
+        public static let all: ShadowDirection = [.left, .right, .up, .down]
+    }
 
-class SnapShotView: UIView {
-    static let TAG = 900100
-    static let DimLayerAlpha: CGFloat = 0.7
-    
-    var snapshotView: UIView?
-    var layerButton: UIButton?
+    public static let TAG = 900100
+    public static let DimLayerAlpha: CGFloat = 0.7
+
+    public var snapshotView: UIView?
+    public var layerButton: UIButton?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(view: UIView, shadows: ShadowDirection = ShadowDirection.none) {
+    public init(view: UIView, shadows: ShadowDirection = ShadowDirection.none) {
         super.init(frame: view.bounds)
         self.tag = SnapShotView.TAG
         guard let snapshot = view.snapshotView(afterScreenUpdates: false) else {

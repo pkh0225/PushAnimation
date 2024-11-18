@@ -8,8 +8,9 @@
 
 import UIKit
 
-public typealias VoidClosure = () -> Void
-public typealias NavigationAnimationClosure     = (_ fromViewController: UIViewController, _ toViewController: UIViewController, _ completion:@escaping VoidClosure) -> Void
+public typealias NavigationAnimationClosure = (_ fromViewController: UIViewController,
+                                               _ toViewController: UIViewController,
+                                               _ completion: @escaping () -> Void) -> Void
 
 
 public enum NavigationAnimationType: Int {
@@ -21,19 +22,18 @@ public enum NavigationAnimationType: Int {
     case snapShot
 }
 
-protocol NavigationAnimatorAble {
+public protocol NavigationAnimatorAble {
     var pushAnimation: PushAnimator? { get }
     var popAnimation: PopAnimator? { get }
 }
 
-class PushAnimator: NSObject  {
-
+public class PushAnimator: NSObject  {
     let leftrightGap: CGFloat = 40
     let upGap: CGFloat = 30
     
-    var duration: TimeInterval = 0.2
-    var type: NavigationAnimationType = .none
-    var animation: NavigationAnimationClosure?
+    public var duration: TimeInterval = 0.2
+    public var type: NavigationAnimationType = .none
+    public var animation: NavigationAnimationClosure?
 
     
     public init(animationType: NavigationAnimationType, duration: TimeInterval = 0.2){
@@ -47,7 +47,7 @@ class PushAnimator: NSObject  {
         self.animation = animation
     }
     
-    func setAnimation(_ closure: @escaping NavigationAnimationClosure) -> Void {
+    public func setAnimation(_ closure: @escaping NavigationAnimationClosure) -> Void {
         self.animation = closure
     }
     
@@ -56,12 +56,12 @@ class PushAnimator: NSObject  {
 }
 
 extension PushAnimator: UIViewControllerAnimatedTransitioning {
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return self.duration
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+
         guard let toViewController = transitionContext.viewController(forKey: .to),
             let fromViewController = transitionContext.viewController(forKey: .from) else {
                 transitionContext.completeTransition(false)

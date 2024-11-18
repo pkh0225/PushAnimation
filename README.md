@@ -3,11 +3,15 @@
 
 [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 
+![sample](https://github.com/user-attachments/assets/03e3f393-e8f3-49d2-a3be-33d6bd374cdf)
+
 - Support all directions :)
 - left, right, up, down, snapshot 
 
 ![blogimg](https://github.com/pkh0225/PushAnimation/blob/master/Artboard.png)
 ![blogimg](https://github.com/pkh0225/PushAnimation/blob/master/Artboard2.png)
+
+
 
 ## 🎨 NavigationAnimationType
 

@@ -3,14 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20F1F0D628AB916B006D3E1A /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1F0D228AB916B006D3E1A /* PopAnimator.swift */; };
-		20F1F0D728AB916B006D3E1A /* SnapShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1F0D328AB916B006D3E1A /* SnapShotView.swift */; };
-		20F1F0D828AB916B006D3E1A /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1F0D428AB916B006D3E1A /* PushAnimator.swift */; };
-		20F1F0D928AB916B006D3E1A /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1F0D528AB916B006D3E1A /* NavigationManager.swift */; };
+		20AD76322CEB0829007A1A92 /* PushAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 20AD76312CEB0829007A1A92 /* PushAnimation */; };
 		20F1F0DB28AB9174006D3E1A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 20F1F0DA28AB9174006D3E1A /* README.md */; };
 		430F1FAE2127AA760014BDBD /* CostomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1FAD2127AA760014BDBD /* CostomViewController.swift */; };
 		43A22FC12126F1C9007653C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A22FC02126F1C9007653C3 /* AppDelegate.swift */; };
@@ -28,10 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20F1F0D228AB916B006D3E1A /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
-		20F1F0D328AB916B006D3E1A /* SnapShotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotView.swift; sourceTree = "<group>"; };
-		20F1F0D428AB916B006D3E1A /* PushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
-		20F1F0D528AB916B006D3E1A /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		20F1F0DA28AB9174006D3E1A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		430F1FAD2127AA760014BDBD /* CostomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostomViewController.swift; sourceTree = "<group>"; };
 		43A22FBD2126F1C9007653C3 /* CustomPushAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPushAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,38 +48,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AD76322CEB0829007A1A92 /* PushAnimation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20F1F0D028AB916B006D3E1A /* Sources */ = {
+		20AD76302CEB0829007A1A92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				20F1F0D128AB916B006D3E1A /* PushAnimation */,
 			);
-			name = Sources;
-			path = ../Sources;
-			sourceTree = "<group>";
-		};
-		20F1F0D128AB916B006D3E1A /* PushAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				20F1F0D228AB916B006D3E1A /* PopAnimator.swift */,
-				20F1F0D428AB916B006D3E1A /* PushAnimator.swift */,
-				20F1F0D328AB916B006D3E1A /* SnapShotView.swift */,
-				20F1F0D528AB916B006D3E1A /* NavigationManager.swift */,
-			);
-			path = PushAnimation;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		43A22FB42126F1C9007653C3 = {
 			isa = PBXGroup;
 			children = (
 				20F1F0DA28AB9174006D3E1A /* README.md */,
-				20F1F0D028AB916B006D3E1A /* Sources */,
 				43A22FBF2126F1C9007653C3 /* CustomPushAnimation */,
+				20AD76302CEB0829007A1A92 /* Frameworks */,
 				43A22FBE2126F1C9007653C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 43A22FB42126F1C9007653C3;
+			packageReferences = (
+				20AD762D2CEB07E4007A1A92 /* XCLocalSwiftPackageReference "../../PushAnimation" */,
+			);
 			productRefGroup = 43A22FBE2126F1C9007653C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,16 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20F1F0D728AB916B006D3E1A /* SnapShotView.swift in Sources */,
 				43A22FDB2126F5AB007653C3 /* UpViewController.swift in Sources */,
 				43A22FDD2126F5AB007653C3 /* RightViewController.swift in Sources */,
 				43A22FD32126F38F007653C3 /* UITableViewExtension.swift in Sources */,
-				20F1F0D628AB916B006D3E1A /* PopAnimator.swift in Sources */,
 				430F1FAE2127AA760014BDBD /* CostomViewController.swift in Sources */,
-				20F1F0D828AB916B006D3E1A /* PushAnimator.swift in Sources */,
 				43A22FD52126F53C007653C3 /* LeftViewController.swift in Sources */,
 				43A22FDC2126F5AB007653C3 /* NoneViewController.swift in Sources */,
-				20F1F0D928AB916B006D3E1A /* NavigationManager.swift in Sources */,
 				43A22FC32126F1C9007653C3 /* RootViewController.swift in Sources */,
 				43A22FC12126F1C9007653C3 /* AppDelegate.swift in Sources */,
 				4B419B712127C12F00A83852 /* DownViewController.swift in Sources */,
@@ -353,6 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomPushAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomPushAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +385,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		20AD762D2CEB07E4007A1A92 /* XCLocalSwiftPackageReference "../../PushAnimation" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../PushAnimation;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20AD76312CEB0829007A1A92 /* PushAnimation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20AD762D2CEB07E4007A1A92 /* XCLocalSwiftPackageReference "../../PushAnimation" */;
+			productName = PushAnimation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43A22FB52126F1C9007653C3 /* Project object */;
 }

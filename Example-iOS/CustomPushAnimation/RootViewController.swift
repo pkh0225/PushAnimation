@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PushAnimation
 
 class RootViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -15,7 +16,6 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UITableViewCell.self)
-        
         NavigationManager.shared.mainNavigation = self.navigationController
     }
 
