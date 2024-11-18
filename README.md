@@ -3,7 +3,7 @@
 
 [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 
-![sample](https://github.com/user-attachments/assets/03e3f393-e8f3-49d2-a3be-33d6bd374cdf)
+![sample](https://github.com/user-attachments/assets/d9620ce9-334b-48d0-a7be-7cbd426f57da)
 
 - Support all directions :)
 - left, right, up, down, snapshot 
