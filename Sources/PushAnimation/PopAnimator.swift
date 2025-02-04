@@ -7,9 +7,6 @@
 //
 import UIKit
 
-
-public typealias BoolReturnClosure = () -> Bool
-
 public class PopAnimator: NSObject   {
     private let VELOCITY_VALUE: CGFloat = 200.0
     
@@ -22,7 +19,7 @@ public class PopAnimator: NSObject   {
     var type: NavigationAnimationType = .none
     
     weak var tagetViewController: UIViewController?
-    public var checkStart: BoolReturnClosure?
+    public var checkStart: (() -> Bool)?
     public var isOnlyGesture: Bool = false {
         willSet {
             self.isAnimation = !newValue

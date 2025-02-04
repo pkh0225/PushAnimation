@@ -1,7 +1,7 @@
 # ⛳️ Custom Navigation Animatior
 > Custom Push and Pop animation
 
-[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <img src="https://github.com/user-attachments/assets/d9620ce9-334b-48d0-a7be-7cbd426f57da" width="333" alt="sample">
 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plA-C0-jbS">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plA-C0-jbS">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,6 +25,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2ek-r8-UfX"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aos-35-HFz" firstAttribute="trailing" secondItem="2ek-r8-UfX" secondAttribute="trailing" id="9G4-lN-7kt"/>
@@ -34,7 +33,6 @@
                             <constraint firstItem="2ek-r8-UfX" firstAttribute="bottom" secondItem="aos-35-HFz" secondAttribute="bottom" id="Ub8-nh-1ln"/>
                             <constraint firstItem="aos-35-HFz" firstAttribute="top" secondItem="2ek-r8-UfX" secondAttribute="top" id="khI-F6-pLb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2ek-r8-UfX"/>
                     </view>
                     <navigationItem key="navigationItem" id="EyK-W8-yGv"/>
                     <connections>
@@ -53,8 +51,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-b4-9vO">
-                                <rect key="frame" x="137" y="318.5" width="100" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-b4-9vO">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555395770848" blue="0.47813349468478916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BFB-Ox-Ml1"/>
@@ -66,12 +64,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="wgZ-TC-eGG"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ehe-b4-9vO" firstAttribute="centerX" secondItem="wgZ-TC-eGG" secondAttribute="centerX" id="ksO-DC-Mb8"/>
                             <constraint firstItem="Ehe-b4-9vO" firstAttribute="centerY" secondItem="wgZ-TC-eGG" secondAttribute="centerY" id="uj7-nz-7Cj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wgZ-TC-eGG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cth-jp-6XP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,7 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oF7-kM-ISK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oF7-kM-ISK">
                                 <rect key="frame" x="0.0" y="50" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555399999998" blue="0.47813349469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -121,17 +119,17 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="kH8-xo-L7L"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4I7-cc-Iok" firstAttribute="top" secondItem="oF7-kM-ISK" secondAttribute="bottom" id="3C6-SV-5po"/>
                             <constraint firstItem="oF7-kM-ISK" firstAttribute="top" secondItem="kH8-xo-L7L" secondAttribute="top" constant="30" id="HhA-2b-3n1"/>
                             <constraint firstItem="4I7-cc-Iok" firstAttribute="leading" secondItem="kH8-xo-L7L" secondAttribute="leading" id="QRs-AK-bnz"/>
                             <constraint firstItem="kH8-xo-L7L" firstAttribute="trailing" secondItem="4I7-cc-Iok" secondAttribute="trailing" id="Qhr-f8-6nj"/>
-                            <constraint firstItem="kH8-xo-L7L" firstAttribute="bottom" secondItem="4I7-cc-Iok" secondAttribute="bottom" id="jE3-8g-yNY"/>
+                            <constraint firstAttribute="bottom" secondItem="4I7-cc-Iok" secondAttribute="bottom" id="jE3-8g-yNY"/>
                             <constraint firstItem="kH8-xo-L7L" firstAttribute="trailing" secondItem="oF7-kM-ISK" secondAttribute="trailing" id="nsU-oW-O4K"/>
                             <constraint firstItem="oF7-kM-ISK" firstAttribute="leading" secondItem="kH8-xo-L7L" secondAttribute="leading" id="wRn-hS-kUS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kH8-xo-L7L"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="4I7-cc-Iok" id="zcb-dl-1q8"/>
@@ -149,8 +147,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzV-Te-yrr">
-                                <rect key="frame" x="137" y="318.5" width="100" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzV-Te-yrr">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555399999998" blue="0.47813349469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fje-kn-vPu"/>
@@ -162,12 +160,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZNB-Yo-cNM"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YzV-Te-yrr" firstAttribute="centerX" secondItem="ZNB-Yo-cNM" secondAttribute="centerX" id="1U2-KP-EwJ"/>
                             <constraint firstItem="YzV-Te-yrr" firstAttribute="centerY" secondItem="ZNB-Yo-cNM" secondAttribute="centerY" id="AqB-vo-Q2d"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ZNB-Yo-cNM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ua-hm-X5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,8 +180,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kN-dD-Pxa">
-                                <rect key="frame" x="137" y="318.5" width="100" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kN-dD-Pxa">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555399999998" blue="0.47813349469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DOX-um-Xlg"/>
@@ -195,12 +193,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Smi-7j-eHI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8kN-dD-Pxa" firstAttribute="centerY" secondItem="Smi-7j-eHI" secondAttribute="centerY" id="BLh-gv-ebX"/>
                             <constraint firstItem="8kN-dD-Pxa" firstAttribute="centerX" secondItem="Smi-7j-eHI" secondAttribute="centerX" id="iyI-rE-vRu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Smi-7j-eHI"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AG-FJ-OHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,8 +213,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv5-uv-8gi">
-                                <rect key="frame" x="137" y="318.5" width="100" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv5-uv-8gi">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555399999998" blue="0.47813349469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ige-AO-rv9"/>
@@ -228,12 +226,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="rn7-C6-Qxa"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jv5-uv-8gi" firstAttribute="centerX" secondItem="rn7-C6-Qxa" secondAttribute="centerX" id="KCr-ay-gl8"/>
                             <constraint firstItem="jv5-uv-8gi" firstAttribute="centerY" secondItem="rn7-C6-Qxa" secondAttribute="centerY" id="ZOB-SH-5os"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rn7-C6-Qxa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w99-BD-ZQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,8 +246,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-iS-wZh">
-                                <rect key="frame" x="137" y="318.5" width="100" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-iS-wZh">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555399999998" blue="0.47813349469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="a2a-ti-qD9"/>
@@ -268,12 +266,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="FCH-ib-gfy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Plh-iS-wZh" firstAttribute="centerY" secondItem="FCH-ib-gfy" secondAttribute="centerY" id="Gam-IR-RjH"/>
                             <constraint firstItem="Plh-iS-wZh" firstAttribute="centerX" secondItem="FCH-ib-gfy" secondAttribute="centerX" id="O8B-V1-dcM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FCH-ib-gfy"/>
                     </view>
                     <connections>
                         <outlet property="testLabel" destination="OGY-aB-Yxy" id="jON-CL-Lje"/>
@@ -299,7 +297,7 @@
                                     <outlet property="delegate" destination="9lN-dm-a5N" id="1RI-mr-MsO"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-ca-n7F">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-ca-n7F">
                                 <rect key="frame" x="0.0" y="417" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.97393555399999998" blue="0.47813349469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -311,6 +309,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ryy-cb-Ad5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ryy-cb-Ad5" firstAttribute="trailing" secondItem="kDQ-QC-JQB" secondAttribute="trailing" id="6re-0j-1bb"/>
@@ -321,7 +320,6 @@
                             <constraint firstItem="kDQ-QC-JQB" firstAttribute="top" secondItem="ryy-cb-Ad5" secondAttribute="top" constant="30" id="lea-dp-dbL"/>
                             <constraint firstItem="L5L-ca-n7F" firstAttribute="leading" secondItem="ryy-cb-Ad5" secondAttribute="leading" id="min-Pw-0HB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ryy-cb-Ad5"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="kDQ-QC-JQB" id="Pwo-Vg-3BD"/>
