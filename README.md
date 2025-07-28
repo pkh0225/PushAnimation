@@ -15,7 +15,7 @@
 
 ## 🎨 NavigationAnimationType
 
-```
+```swift
 public enum NavigationAnimationType: Int {
     case none = 0
     case left
@@ -31,7 +31,7 @@ public enum NavigationAnimationType: Int {
 
 ## 🚦 Protocol - NavigationAnimatorAble
 
-```
+```swift
 protocol NavigationAnimatorAble {
     var pushAnimation: PushAnimator? { get }
     var popAnimation: PopAnimator? { get }
@@ -46,7 +46,7 @@ protocol NavigationAnimatorAble {
 2. Implement push & pop animator like below
 
 
-```
+```swift
 extension RightViewController: NavigationAnimatorAble {
     var pushAnimation: PushAnimator? {
         return PushAnimator(animationType:.right)
@@ -59,7 +59,7 @@ extension RightViewController: NavigationAnimatorAble {
 
 ## 📸 Snapshot view
 
-```
+```swift
 extension SnapShotViewController: NavigationAnimatorAble {
     var pushAnimation: PushAnimator? {
         return PushAnimator(animationType: .snapShot)
@@ -72,11 +72,11 @@ extension SnapShotViewController: NavigationAnimatorAble {
 
 ##### You can also create shadow below snapshow view
 
-```
+```swift
 let snapShotView = SnapShotView(view: fromViewController.view, shadows: .right)
 ```
 
-```
+```swift
 struct ShadowDirection: OptionSet {
     let rawValue: Int
     static let left = ShadowDirection(rawValue: 1 << 0)
